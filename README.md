@@ -58,4 +58,8 @@ Game consists of 5 rounds, and the player with most wins is the final winner
 
 📸 Screenshots 
 
+![image alt](https://github.com/ankur2802/Stone_Paper_Scissor-Game/blob/main/opening%20page.png?raw=true)
+
 ![image alt](https://github.com/ankur2802/Stone_Paper_Scissor-Game/blob/main/round1.png?raw=true)
+
+![image alt](https://github.com/ankur2802/Stone_Paper_Scissor-Game/blob/main/final_round_result.png?raw=true)
