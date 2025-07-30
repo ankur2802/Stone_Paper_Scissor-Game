@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>Stone Paper Scissors</title>
+    <link rel="stylesheet" th:href="@{/style.css}" />
+</head>
+<body>
+    <div class="container">
+    
+   
+    
+        <h1>Stone Paper Scissors - Round <span th:text="${round - 1}"></span> of 5</h1>
+
+        <form th:if="${round <= 5}" action="/play" method="post">
+            <button name="playerChoice" value="stone"><img src="/stone.png" alt="Stone" width="80"/></button>
+            <button name="playerChoice" value="paper"><img src="/paper.png" alt="Paper" width="80"/></button>
+            <button name="playerChoice" value="scissors"><img src="/scissors.png" alt="Scissors" width="80"/></button>
+        </form>
+
+        <div class="result" th:if="${result}">
+            <p><strong>You chose:</strong> <span th:text="${playerChoice}"></span></p>
+            <p><strong>Computer chose:</strong> <span th:text="${computerChoice}"></span></p>
+            <h2 th:text="${result}"></h2>
+        </div>
+
+        <div class="scores" th:if="${round > 1}">
+            <p><strong>Your Score:</strong> <span th:text="${playerScore}"></span></p>
+            <p><strong>Computer Score:</strong> <span th:text="${computerScore}"></span></p>
+        </div>
+
+        <div class="final" th:if="${finalWinner}">
+            <h2 th:text="${finalWinner}"></h2>
+            <form action="/restart" method="post">
+                <button type="submit">Restart Game</button>
+            </form>
+        </div>
+    </div>
+</body>
+</html>
